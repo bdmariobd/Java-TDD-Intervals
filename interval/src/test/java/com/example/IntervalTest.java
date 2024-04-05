@@ -21,4 +21,9 @@ public class IntervalTest {
         assertFalse(new Interval(-1.7, true, 5555.0, false).include(5555.0));
     }
 
+    @Test
+    public void givenIntervalwhenIncludeWithLimitLowerValueThenFalse() {
+        assertFalse(new Interval(-1.7, false, 5555.0, false).include(-1.7));
+    }
+
 }
