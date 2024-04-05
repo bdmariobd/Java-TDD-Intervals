@@ -1,10 +1,14 @@
 package com.example;
 
 public class Interval {
-    public Interval(double d, double e) {
+    private double lowerBound;
+    private double upperBound;
+    public Interval(double lowerBound, double upperBound) {
+        this.lowerBound = lowerBound;
+        this.upperBound = upperBound;
     }
 
     public boolean include(double d) {
-        return true;
+        return lowerBound <= d && d <= upperBound;
     }
 }
