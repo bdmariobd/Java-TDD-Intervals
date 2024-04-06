@@ -6,7 +6,7 @@ public class Max {
     }
 
     public boolean greaterThan(double valueToCompare) {
-        return false;
+        return true;
     }
 
 }

@@ -7,6 +7,7 @@ public class Interval {
     private boolean includeUpperBound;
 
     public Interval(double lowerBound, boolean includeLowerBound, double upperBound, boolean includeUpperBound) {
+        assert lowerBound <= upperBound;
         this.lowerBound = lowerBound;
         this.includeLowerBound = includeLowerBound;
         this.upperBound = upperBound;
