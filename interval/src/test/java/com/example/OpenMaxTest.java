@@ -16,5 +16,4 @@ public class OpenMaxTest{
     public void givenOpenMaxWhenNotGreaterThanThenFalse() {
         assertFalse(new OpenMax(0).greaterThan(1.0));
     }
-
 }

@@ -6,19 +6,13 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 public class MaxTest {
-
-    @Test
-    public void givenIntervalwhenIncludeWithIncludedValueThenTrue(){
-      assertTrue(new Max(4, true).greaterThan(0.0));
-    }
-
-    @Test
-    public void givenIntervalwhenIncludeWithExcludedValueThenFalse(){
-      assertFalse(new Max(-4, true).greaterThan(0.0));
-    }
-
     @Test
     public void givenIntervalwhenNotIncludeWithLimitValueThenFalse(){
-      assertFalse(new Max(4, false).greaterThan(4.0));
+      assertFalse(new Max(4).greaterThan(4.0));
+    }
+
+    @Test
+    public void givenIntervalGreaterThanThenTrue(){
+      assertTrue(new Max(4).greaterThan(3.0));
     }
 }
