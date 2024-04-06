@@ -1,29 +1,15 @@
 package com.example;
 
 public class Interval {
-    private double lowerBound;
-    private boolean includeLowerBound;
-    private double upperBound;
-    private boolean includeUpperBound;
+    private Min min;
+    private Max max;
 
-    public Interval(double lowerBound, boolean includeLowerBound, double upperBound, boolean includeUpperBound) {
-        assert lowerBound <= upperBound;
-        this.lowerBound = lowerBound;
-        this.includeLowerBound = includeLowerBound;
-        this.upperBound = upperBound;
-        this.includeUpperBound = includeUpperBound;
+    public Interval(Min min, Max max) {
+        this.min = min;
+        this.max = max;
     }
 
     public boolean include(double d) {
-        if (d < lowerBound || d > upperBound) {
-            return false;
-        }
-        if (d == lowerBound) {
-            return includeLowerBound;
-        }
-        if (d == upperBound) {
-            return includeUpperBound;
-        }
-        return true;
+        return min.lessThan(d) && max.greaterThan(d);
     }
 }
