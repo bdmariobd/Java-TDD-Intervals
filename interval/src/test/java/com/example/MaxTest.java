@@ -16,4 +16,9 @@ public class MaxTest {
     public void givenIntervalwhenIncludeWithExcludedValueThenFalse(){
       assertFalse(new Max(-4, true).greaterThan(0.0));
     }
+
+    @Test
+    public void givenIntervalwhenNotIncludeWithLimitValueThenFalse(){
+      assertFalse(new Max(4, false).greaterThan(4.0));
+    }
 }
