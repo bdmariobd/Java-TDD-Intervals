@@ -8,6 +8,6 @@ public class OpenMax extends Max{
 
     @Override
     public boolean greaterThan(double number) {
-        return false;
+        return true;
     }
 }
