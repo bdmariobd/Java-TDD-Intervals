@@ -1,12 +1,14 @@
 package com.example;
 
 public class Max {
+    
+    double number;
 
-    public Max(int number, boolean include) {
+    public Max(double number, boolean include) {
+        this.number = number;
     }
 
     public boolean greaterThan(double valueToCompare) {
-        return true;
+        return this.number >= valueToCompare;
     }
-
 }
